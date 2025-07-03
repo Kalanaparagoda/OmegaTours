@@ -1,0 +1,111 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taxi Booking Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="container bg-white p-8 rounded-xl shadow-lg w-full max-w-md mx-4">
+    <div id="bookingFormContainer">
+      <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Taxi Booking</h2>
+      <form id="bookingForm">
+        <div class="mb-4">
+          <label for="fullname" class="block text-gray-700 text-sm font-medium mb-2">Full Name</label>
+          <input type="text" id="fullname" name="fullname" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500" required>
+        </div>
+
+        <div class="mb-4">
+          <label for="pickup" class="block text-gray-700 text-sm font-medium mb-2">Pickup Location</label>
+          <input type="text" id="pickup" name="pickup" list="locations" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500" required>
+        </div>
+
+        <div class="mb-4">
+          <label for="drop" class="block text-gray-700 text-sm font-medium mb-2">Drop-off Location</label>
+          <input type="text" id="drop" name="drop" list="locations" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500" required>
+        </div>
+
+        <datalist id="locations">
+          <option value="Bandaranaike International Airport (CMB)"></option>
+          <option value="Colombo Fort"></option>
+          <option value="Galle Fort"></option>
+          <option value="Kandy"></option>
+          <option value="Sigiriya Rock Fortress"></option>
+          <option value="Ella"></option>
+          <option value="Mirissa"></option>
+          <option value="Unawatuna Beach"></option>
+          <option value="Nuwara Eliya"></option>
+          <option value="Yala National Park"></option>
+          <option value="Arugam Bay"></option>
+          <option value="Trincomalee"></option>
+          <option value="Dambulla Cave Temple"></option>
+        </datalist>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+                <label for="date" class="block text-gray-700 text-sm font-medium mb-2">Pickup Date</label>
+                <input type="date" id="date" name="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500" required>
+            </div>
+            <div>
+                <label for="time" class="block text-gray-700 text-sm font-medium mb-2">Pickup Time</label>
+                <input type="time" id="time" name="time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-yellow-500 focus:border-yellow-500" required>
+            </div>
+        </div>
+
+        <button type="submit" class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300 ease-in-out">Book Now</button>
+      </form>
+    </div>
+
+    <!-- This is the updated section that displays booking details -->
+    <div id="confirmationContainer" class="hidden text-center">
+        <h2 class="text-2xl font-bold text-green-600 mb-4">Booking Confirmed!</h2>
+        <!-- The thank you message has been changed -->
+        <p class="text-gray-700 mb-6">Your booking details are below. We will be in touch shortly.</p>
+        <div class="bg-gray-50 p-6 rounded-lg text-left space-y-3 border border-gray-200">
+            <p><strong>Name:</strong> <span id="confirmName"></span></p>
+            <p><strong>Pickup Location:</strong> <span id="confirmPickup"></span></p>
+            <p><strong>Drop-off Location:</strong> <span id="confirmDrop"></span></p>
+            <p><strong>Pickup Date:</strong> <span id="confirmDate"></span></p>
+            <p><strong>Pickup Time:</strong> <span id="confirmTime"></span></p>
+        </div>
+        <!-- The "Book Another Taxi" button has been removed -->
+    </div>
+
+  </div>
+
+  <script>
+    // --- Event listener for the form submission ---
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent the form from actually submitting and reloading the page
+
+      // --- Get data from the form ---
+      const formData = new FormData(this);
+      const name = formData.get('fullname');
+      const pickup = formData.get('pickup');
+      const drop = formData.get('drop');
+      const date = formData.get('date');
+      const time = formData.get('time');
+
+      // --- Populate the confirmation details ---
+      document.getElementById('confirmName').textContent = name;
+      document.getElementById('confirmPickup').textContent = pickup;
+      document.getElementById('confirmDrop').textContent = drop;
+      document.getElementById('confirmDate').textContent = date;
+      document.getElementById('confirmTime').textContent = time;
+
+      // --- Switch views ---
+      document.getElementById('bookingFormContainer').classList.add('hidden');
+      document.getElementById('confirmationContainer').classList.remove('hidden');
+    });
+  </script>
+
+
+</body>
+</html>

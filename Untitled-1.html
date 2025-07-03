@@ -1,0 +1,258 @@
+<html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Omega Tours </title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ece6e6; 
+        }
+        .font-display {
+            font-family: 'Playfair Display', serif;
+        }
+        .card-hover-effect {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(197, 194, 194, 0.1), 0 8px 10px -6px rgba(218, 211, 211, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <img src = "logo.png" alt="Sri Lanka Logo" class="w-30 h-20">
+            <nav class="hidden md:flex space-x-8">
+                <a href="#destinations" class="text-gray-600 hover:text-emerald-700 transition duration-300">Destinations</a>
+                <a href="#experiences" class="text-gray-600 hover:text-emerald-700 transition duration-300">Experiences</a>
+                <a href="New .html" class="text-gray-600 hover:text-emerald-700 transition duration-300">Gallery</a>
+                <a href="#tips" class="text-gray-600 hover:text-emerald-700 transition duration-300">Travel Tips</a>
+            </nav>
+            <a href="#contact" class="hidden md:inline-block bg-emerald-600 text-white font-bold py-2 px-5 rounded-full hover:bg-emerald-700 transition duration-300">Plan Your Trip</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#destinations" class="block py-2 text-gray-600 hover:text-emerald-700">Destinations</a>
+            <a href="#experiences" class="block py-2 text-gray-600 hover:text-emerald-700">Experiences</a>
+            <a href="New .html" class="block py-2 text-gray-600 hover:text-emerald-700">Gallery</a>
+            <a href="#tips" class="block py-2 text-gray-600 hover:text-emerald-700">Travel Tips</a>
+            <a href="#contact" class="block mt-2 w-full text-center bg-emerald-600 text-white font-bold py-2 px-5 rounded-full hover:bg-emerald-700">Plan Your Trip</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        <!-- Video Background -->
+        <div class="absolute top-0 left-0 w-full h-full z-0">
+            <video autoplay loop muted playsinline class="w-full h-full object-cover">
+                <source src="bgvideo.mp4" type="video/mp4">
+            </video>
+            <div class="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-3xl px-4 text-white">
+            <h1 class="text-5xl md:text-7xl font-black font-display leading-tight mb-4">Ayubowan   Sri Lanka!</h1>
+            <br>
+            <br>
+            <a href="booking.html" class="bg-white text-emerald-800 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition duration-300">Booking</a>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16 md:py-24">
+        
+        <!-- Destinations Section -->
+        <section id="destinations" class="mb-24">
+            <h2 class="text-4xl font-bold font-display text-center mb-4">Unforgettable Destinations</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">From ancient rock fortresses to misty mountains and golden shores, every corner of Sri Lanka tells a story.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Sigiriya -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover-effect">
+                    <img src="https://www.lovidhu.com/uploads/posts-seo/2021/03/sigiria-sri-lanka.jpg" alt="Sigiriya Rock Fortress" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold font-display mb-2">Sigiriya Rock Fortress</h3>
+                        <p class="text-gray-600">Climb the ancient 'Lion Rock' fortress to witness breathtaking frescoes and panoramic views. A UNESCO World Heritage site and a true marvel of engineering.</p>
+                    </div>
+                </div>
+                <!-- Card 2: Ella -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover-effect">
+                    <img src="https://www.travelwithachila.com/wp-content/uploads/2023/06/Ella-Sri-Lanka.jpg" alt="Train journey in Ella" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold font-display mb-2">Ella & Hill Country</h3>
+                        <p class="text-gray-600">Experience the heart of tea country. Hike to Ella Rock, see the iconic Nine Arch Bridge, and breathe in the fresh mountain air.</p>
+                    </div>
+                </div>
+                <!-- Card 3: Yala -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover-effect">
+                    <img src="https://bmkltsly13vb.compat.objectstorage.ap-singapore-1.oraclecloud.com/cdn.sg.dailymirror.lk/assets/uploads/image_9b7c3d2b17.jpg" alt="Leopard in Yala National Park" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold font-display mb-2">Yala National Park</h3>
+                        <p class="text-gray-600">Embark on a thrilling safari to spot leopards, elephants, and a stunning array of birdlife in one of the world's best wildlife destinations.</p>
+                    </div>
+                </div>
+                <!-- Card 4: Galle -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover-effect">
+                    <img src="https://www.archaeology.lk/wp-content/uploads/2020/11/galle_fort_sri_lanka_aerial_view_buddhika_dilshan.jpg" alt="Galle Fort Lighthouse" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold font-display mb-2">Galle Fort</h3>
+                        <p class="text-gray-600">Wander through the charming cobblestone streets of this Dutch colonial fort, filled with boutique shops, cafes, and rich history.</p>
+                    </div>
+                </div>
+                <!-- Card 5: Beaches -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover-effect">
+                    <img src="https://duqjpivknq39s.cloudfront.net/2018/12/Mirissa-cocnut-tree-point-1024x768.jpg" alt="Palm trees on a golden beach" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold font-display mb-2">Southern Beaches</h3>
+                        <p class="text-gray-600">From the surfing paradise of Arugam Bay to the tranquil shores of Mirissa and Unawatuna, find your perfect spot in the sun.</p>
+                    </div>
+                </div>
+                <!-- Card 6: Kandy -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover-effect">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrhG_ouAuKJR_dyDgR0v4X7IyMpH2RiS7NCmI_UbTW3e_bfMtBqEe9N35ZP_7EZOsGURoSdWJ1XCRdF5_2TdMATeAfo0V1oLQbPD1sQSKjtrQMkT3JbcndkaUAqkP1zpalnuU3XRJfV4Y/s1600/Temple+of+the+Sacred+Tooth+Relic.JPG" alt="Temple of the Tooth in Kandy" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold font-display mb-2">Kandy</h3>
+                        <p class="text-gray-600">The cultural capital, home to the sacred Temple of the Tooth Relic. Enjoy a peaceful walk around Kandy Lake and witness a traditional dance show.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiences Section -->
+        <section id="experiences" class="mb-24">
+            <h2 class="text-4xl font-bold font-display text-center mb-12">More Than a Holiday, It's an Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <!-- Experience 1: Food -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover-effect">
+                    <div class="bg-amber-100 rounded-full h-20 w-20 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-amber-600" viewBox="0 0 20 20" fill="currentColor"><path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM2 12a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Taste of Sri Lanka</h3>
+                    <p class="text-gray-600">Savor the explosion of flavors in our curries, hoppers, and kottu roti. A true feast for the senses.</p>
+                </div>
+                <!-- Experience 2: Wildlife -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover-effect">
+                    <div class="bg-lime-100 rounded-full h-20 w-20 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-lime-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 12l-4-4-4 4m4 4V4" /><path d="M8 12h8" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Wildlife Safaris</h3>
+                    <p class="text-gray-600">Go on an adventure to see majestic elephants, elusive leopards, and giant blue whales in their natural habitat.</p>
+                </div>
+                <!-- Experience 3: Wellness -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover-effect">
+                    <div class="bg-teal-100 rounded-full h-20 w-20 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ayurvedic Healing</h3>
+                    <p class="text-gray-600">Rejuvenate your body and soul with ancient Ayurvedic treatments and yoga retreats in serene settings.</p>
+                </div>
+                <!-- Experience 4: Train Journeys -->
+                <div class="bg-white p-8 rounded-lg shadow-lg card-hover-effect">
+                    <div class="bg-sky-100 rounded-full h-20 w-20 flex items-center justify-center mx-auto mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Scenic Train Rides</h3>
+                    <p class="text-gray-600">Take one of the world's most beautiful train journeys through rolling tea plantations and misty mountains.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Travel Tips Section -->
+        <section id="tips" class="bg-emerald-50 rounded-lg p-8 md:p-12">
+            <h2 class="text-4xl font-bold font-display text-center mb-12">A Local's Guide to Your Trip</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-700">
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-emerald-800">Best Time to Visit</h3>
+                    <p>For the west and south coasts, the best time is from December to March. For the east coast and ancient cities, it's from April to September. But honestly, it's a beautiful destination year-round!</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-emerald-800">Getting Around</h3>
+                    <p>Tuk-tuks are perfect for short trips (always agree on a price first!). For longer journeys, hire a car with a driver or take our scenic trains. It's an experience in itself.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-3 text-emerald-800">What to Pack</h3>
+                    <p>Light cotton clothes, swimwear, and a good pair of walking shoes. Bring a shawl or sarong for visiting temples, and a light jacket for the cool evenings in the hill country.</p>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-3 text-emerald-800">Respectful Travel</h3>
+                    <p>When visiting temples, please cover your shoulders and knees. It's a sign of respect. And always be mindful when taking photos of people or religious sites.</p>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-3 text-emerald-800">Stay Connected</h3>
+                    <p>Getting a local SIM card at the airport is easy and affordable. It's the best way to have data on the go for maps and sharing your amazing photos!</p>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-bold mb-3 text-emerald-800">Embrace the Spice!</h3>
+                    <p>Don't be afraid to try the local food from small eateries. If you're not used to spicy food, you can always ask for "less spicy". We want you to enjoy it!</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-2xl font-bold font-display mb-4">Sri Lanka</h3>
+                    <p class="text-gray-400">The Pearl of the Indian Ocean awaits. <br> Created with love by a fellow Sri Lankan.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact</h4>
+                    <ul>
+                        <ul class="elementor-icon-list-items">
+						<li class="elementor-icon-list-item">
+                        <h6 class="elementor-heading-title elementor-size-default">Phone</h6><img src="https://cdn-icons-png.flaticon.com/128/3095/3095610.png" alt="Phone Icon" class="inline-block w-6 h-6 mr-2"><a href="mailto:+94778465962">+94778465962</a>
+                        <br>
+                        <h6 class="elementor-heading-title elementor-size-default">Email</h6><img src="https://cdn-icons-png.flaticon.com/128/2767/2767188.png" alt="Email Icon" class="inline-block w-6 h-6 mr-2"><a href="mailto:omegarentandtours@gmail.com">omegarentandtours@gmail.com</a>
+
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Follow Our </h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#"><img src="https://cdn3.iconfinder.com/data/icons/social-media-black-white-2/512/BW_Facebook_2_glyph_svg-128.png" alt="facebook" class="inline-block w-6 h-6 mr-2">
+                        <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/social-media-black-white-2/600/Instagram_glyph_svg-128.png" alt="instagram" class="inline-block w-6 h-6 mr-2">
+                        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968917.png" alt="Tripadvisor" class="inline-block w-6 h-6 mr-2">
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500 text-sm">
+                <p> Sri Lanka Tourism. All Rights Reserved. Powered by Kalana Paragoda.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
